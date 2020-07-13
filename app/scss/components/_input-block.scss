@@ -1,0 +1,55 @@
+.input-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &__label {
+    @extend %font-prim;
+    @include font($size: 1.5rem, $height: 2rem);
+    color: rgba($color-primary-text, 0.5);
+  }
+  &__text {
+    width: 100%;
+    padding: 8px 0px 4px 0px;
+    border: none;
+    border-bottom: 1.5px solid rgba($color-primary-text, 0.3);
+    background: transparent;
+    &::placeholder {
+      @extend %font-prim;
+      @include font($size: 1.8rem);
+      color: $color-primary-text;
+    }
+  }
+  &__checkbox-wrapper {
+    display: flex;
+  }
+  &__checkbox {
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background: $color-additional-text;
+    color: $color-primary-text;
+    &:hover {
+      background: $color-additional-light;
+    }
+    &:checked {
+      background: $color-primary;
+    }
+    &:checked::before {
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      content: "✔";
+      display: inline-block;
+      font-size: 12px;
+      text-align: center;
+      line-height: 20px;
+    }
+  }
+  &__checkbox-label {
+    padding-left: 10px;
+    @extend %font-prim;
+    @include font($size: 1.6rem, $height: 2.2rem);
+    color: $color-primary-text;
+  }
+}

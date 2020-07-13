@@ -1,0 +1,39 @@
+.section-types-repair {
+  padding-top: 50px;
+
+  &__cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    & > * {
+      margin: 0 10px;
+    }
+  }
+}
+
+@include media-laptop {
+  .section-types-repair {
+    &__cards-wrapper {
+      & > * {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@include media-tablet-small {
+  .section-types-repair {
+    padding-top: 30px;
+    &__cards-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      & > * {
+        margin: 0px 10px 40px 10px;
+      }
+      .card-promo {
+        align-self: flex-start;
+      }
+    }
+  }
+}

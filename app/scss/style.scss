@@ -1,0 +1,42 @@
+//Abstract
+@import "abstract/constants";
+@import "abstract/mixins";
+@import "abstract/placeholders";
+
+//Base
+@import "base/fonts";
+@import "base/base";
+@import "base/logo";
+@import "base/buttons";
+@import "base/normalize";
+
+//Layouts
+@import "layouts/wrapper";
+@import "layouts/header";
+
+// Components
+@import "components/navigation";
+@import "components/instagram";
+@import "components/promo";
+@import "components/scroll-down";
+@import "components/custom-table";
+@import "components/slider";
+@import "components/list-works";
+@import "components/intro-for-sections";
+@import "components/input-block";
+@import "components/request-call";
+@import "components/card-block";
+@import "components/card-promo";
+@import "components/request-call";
+//---
+@import "components/section-intro";
+@import "components/section-complited-projects";
+@import "components/section-online-controls";
+@import "components/section-types-repair";
+@import "components/section-measurement";
+@import "components/section-design-stiles";
+@import "components/section-design-project";
+@import "components/section-work-steps";
+@import "components/section-our-team";
+@import "components/section-our-clients";
+@import "components/section-contacts";

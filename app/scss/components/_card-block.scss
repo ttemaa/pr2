@@ -1,0 +1,45 @@
+.card-block {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  &_icon-modified {
+    position: relative;
+    padding: 30px 0 0 30px;
+  }
+  &__img {
+    max-width: 100%;
+    box-shadow: 0px 0px 20px rgba($color-additional, 0.2);
+  }
+  &__card-promo {
+    margin-top: -80px;
+    min-width: 70%;
+  }
+
+  &__icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-primary;
+    width: 70px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@include media-tablet {
+  .card-block {
+    &__card-promo {
+      margin-top: -50px;
+    }
+  }
+}
+
+@include media-tablet-small {
+  .card-block {
+    &__card-promo {
+      margin-top: -100px;
+    }
+  }
+}

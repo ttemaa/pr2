@@ -1,0 +1,109 @@
+.card-promo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  position: relative;
+  background-color: $color-primary-text;
+  box-shadow: 0px 0px 20px rgba($color-additional, 0.2);
+
+  &__title {
+    @extend %font-prim;
+    @include font($size: 1.8rem, $height: 2.5rem);
+    color: $color-additional-light;
+  }
+  &__list {
+    padding: 10px 0px 10px 30px;
+    li {
+      @extend %font-prim;
+      @include font($size: 1.5rem, $height: 2.5rem);
+      color: $color-additional-text;
+    }
+  }
+  &__btn-wrapper {
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+  }
+  &__name {
+    text-align: center;
+    @extend %font-add;
+    @include font($size: 1.8rem, $height: 2.5rem);
+    color: $color-additional;
+  }
+  &__position {
+    text-align: center;
+    @extend %font-prim;
+    @include font($size: 1.8rem, $height: 2.5rem);
+    color: $color-additional-light;
+  }
+  &__experience {
+    position: absolute;
+    left: 0px;
+    bottom: -40px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: $color-primary;
+    color: $color-primary-text;
+    @extend %font-prim;
+    @include font($size: 1.3rem, $height: 2rem);
+  }
+  &__client-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    & > * {
+      text-align: left;
+    }
+  }
+  &__photo {
+    margin-right: 20px;
+    img {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+    }
+  }
+  &__review {
+    text-align: left;
+    @extend %font-prim;
+    @include font($size: 1.5rem);
+    line-height: 180%;
+    color: $color-additional-light;
+  }
+}
+@include media-laptop {
+  .card-promo {
+    &__photo {
+      img {
+        width: 70px;
+        height: 70px;
+      }
+      margin-right: 15px;
+    }
+    &__name {
+      @include font($size: 1.6rem, $height: 2rem);
+    }
+  }
+}
+
+@include media-tablet {
+  .card-promo {
+    padding: 10px;
+    &__list {
+      list-style: none;
+      padding: 10px 0px 10px 10px;
+    }
+  }
+}
+
+@include media-tablet-small {
+  .card-promo {
+    padding: 20px;
+    &__list {
+      list-style: disc;
+      padding: 10px 0px 10px 30px;
+    }
+  }
+}

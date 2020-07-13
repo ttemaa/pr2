@@ -1,0 +1,23 @@
+.instagram {
+  &__link {
+    @extend %font-prim;
+    @include font($size: 1.4rem, $height: 1.6rem);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-primary;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 90px;
+      width: 50px;
+      height: 2px;
+      background-color: $color-primary;
+    }
+    &:hover {
+      @extend %transition;
+      text-decoration: underline;
+    }
+  }
+}
